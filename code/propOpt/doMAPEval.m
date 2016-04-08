@@ -1,5 +1,9 @@
-function stat = doMAPEval(B, S, param, O, W, BGp)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This function evaluate the target function
+% given a output window set.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+function stat = doMAPEval(B, S, param, O, W, BGp)
 
 stat.W = [];
 stat.Xp = []; % optimal w_{ij} given the output set

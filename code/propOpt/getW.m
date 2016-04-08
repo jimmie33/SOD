@@ -1,6 +1,10 @@
-function [W, Xp] = getW(B, S, param)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Precompute all w_{ij}
-% Xp is the likelihood of the optimal assignments given the current output set 
+% Xp is the likelihood of the optimal assignments given 
+% the current output set 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+function [W, Xp] = getW(B, S, param)
 
 P = zeros(size(B,2));
 for i = 1:size(B,2)
