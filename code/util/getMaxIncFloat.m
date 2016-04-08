@@ -1,3 +1,8 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Another way to define window similarity:
+% Intersection over min area.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 function inc = getMaxIncFloat(res,gt)
 
 xmin = max(res(:,1),gt(1));

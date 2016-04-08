@@ -1,3 +1,14 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% An implementation of the Maximum Marginal
+% Relevance re-ranking method used in this 
+% paper:
+%
+% J. Carreira and C. Sminchisescu. CPMC: 
+% Automatic object segmentation using 
+% constrained parametric min-cuts. PAMI,
+% 34(7):1312–1328, 2012.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 function [P, S] = doMMR(bbox, score, lambda)
 
 res = [];

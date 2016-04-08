@@ -36,7 +36,7 @@ legs = [];
 
 %% evaluate the MAP method
 fprintf('run the MAP method\n');
-lambda = [0,0.000001,0.0001,0.01:0.01:0.1,0.1:0.05:1];
+lambda = [0,0.000001,0.0001,0.01:0.01:0.1,0.1:0.1:1];
 res = [];
 for j = 1:numel(imgIdx)
     I = imreadRGB(fullfile('dataset/MSO/img/',imgIdx(j).name));

@@ -1,5 +1,9 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Handles index images and grayscale images
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 function I = imreadRGB(fileName)
-% handles index images and grayscale images
+
 
 [I, cmap] = imread(fileName);
 if size(cmap,2) > 0

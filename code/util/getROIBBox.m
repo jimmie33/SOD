@@ -1,3 +1,8 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Translate the coordinates back into the 
+% original image.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 function B = getROIBBox(B, roi)
 
 ratio = (roi([3 4]) - roi([1 2]))';
