@@ -17,7 +17,7 @@ This method aims at producing a highly compact set of detection windows for sali
 4. Run **demo.m**.
  
 ## Evaluation
-You can reproduce the result on the MSO dataset reported in the paper, by run **benchmarkMSO.m**. It will automatically download the MSO dataset and the pre-trained VGG16 model.
+You can reproduce the result on [the MSO dataset](http://cs-people.bu.edu/jmzhang/sos.html) reported in the paper, by run **benchmarkMSO.m**. It will automatically download the MSO dataset and the pre-trained VGG16 model.
 
 ## Miscs
 To change CNN models or other configurations, please check **getParam.m**.
