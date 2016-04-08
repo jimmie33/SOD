@@ -1,3 +1,12 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Calculating average precision using 11 point
+% averaging.
+%
+% We first linearly interpolate the PR curves, 
+% which turns out to be more robust to the 
+% number of points sampled on the PR cureve.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 function ap = calcAP(rec, prec, interval)
 if nargin < 3
     interval = 0:0.1:1;

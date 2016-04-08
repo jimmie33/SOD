@@ -1,3 +1,8 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This function returns the correct detection
+% windows given the ground truth.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 function res = getGTHitBoxes(bboxes, anno, thresh)
 res = [];
 if isempty(anno) || isempty(bboxes)

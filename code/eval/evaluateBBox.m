@@ -1,7 +1,12 @@
-function [TP NPred NGT] = evaluateBBox(imgList,res,classrange)
-if nargin < 3
-    classrange = [];
-end
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Function for evaluation.
+%
+% It outputs the number of hits, prediction 
+% and ground truths for each image.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+function [TP NPred NGT] = evaluateBBox(imgList,res)
+
 TTP = zeros(numel(res),numel(imgList));
 NPred = zeros(numel(res),numel(imgList));
 NGT = zeros(1,numel(imgList));
@@ -9,9 +14,6 @@ for i = 1:numel(res)
     pred_num = zeros(1,numel(imgList));
     TP = zeros(1,numel(imgList));
     for j = 1:numel(imgList)
-        if ~isempty(classrange) && ~any(imgList(j).label==classrange)
-            continue
-        end
         NGT(j) = size(imgList(j).anno,1);
         pred_num(j) = size(res{i}{j},2);
         bboxes = getGTHitBoxes(res{i}{j},imgList(j).anno, 0.5);
