@@ -149,4 +149,4 @@ legs{end+1} = sprintf('MMR: %f',ap);
 
 grid on
 legend(legs)
-title('PR Curves on the MSO Dataset')
+title(sprintf('PR Curves on the MSO Dataset (%s)', param.modelName))
