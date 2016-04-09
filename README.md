@@ -26,5 +26,6 @@ You can reproduce the result on [the MSO dataset](http://cs-people.bu.edu/jmzhan
 To change CNN models or other configurations, please check **getParam.m**.
 
 In the demo, we use the pre-trained GoogleNet, which is faster and slightly better than the VGG16 model used in our paper.
-We also provide the heuristic window refining process to further enhanse the performance. Note that this process is not used in our evaluation.
+We have also added a heuristic window refining process for small objects. 
+Note that this process is not included in our paper or used in our evaluation.
 
