@@ -5,7 +5,7 @@
 % this ROI again and extract the output that has the 
 % largest IOU with the orignal window for replacement.
 %
-% NMS is furthe applied to remove duplicate windows.
+% NMS is further applied to remove duplicate windows.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function res = refineWin(I, res, net, param)
 
@@ -15,8 +15,8 @@ for i = 1:size(res,2)
     bb = res(:,i);
     bbArea = (bb(3)-bb(1))*(bb(4)-bb(2));
     % only refine small windows
-    if bbArea < 0.25*imsz(1)*imsz(2)
-        margin = (bb(3)-bb(1)+bb(4)-bb(2))*0.125;
+    if bbArea < 0.125*imsz(1)*imsz(2)
+        margin = (bb(3)-bb(1)+bb(4)-bb(2))*0.2;
         bb = round(expandROI(bb, imsz, margin));
         Itmp = I(bb(2):bb(4), bb(1):bb(3) , :);
         [Ptmp, Stmp] = getProposals(Itmp, net, param);

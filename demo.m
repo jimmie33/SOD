@@ -1,5 +1,6 @@
 
-I = imreadRGB(fullfile('../../SOID/SalDetEval/dataset/MSRA/srcimg/','0_1_1728.jpg'));
+
+I = imreadRGB(fullfile('birds.jpg'));
 imsz = [size(I,1), size(I,2)];
 
 tic;
@@ -8,6 +9,8 @@ res = propOpt(P, S, param);
 
 % scale bboxes to full size
 res = bsxfun(@times, res, imsz([2 1 2 1])');
+
+% optional window refining process
 resRefine = refineWin(I, res, net, param);
 toc
 
@@ -18,6 +21,7 @@ for i = 1:size(res,2)
     rect(3:4) = rect(3:4)-rect(1:2) +1;
     rectangle('Position',rect,'linewidth',2,'edgecolor',[1 0 0]);
 end
+title('W/O Window Refining');
 
 subplot(1,2,2)
 
@@ -27,5 +31,5 @@ for i = 1:size(resRefine,2)
     rect(3:4) = rect(3:4)-rect(1:2) +1;
     rectangle('Position',rect,'linewidth',2,'edgecolor',[1 0 0]);
 end
-
+title(sprintf('With Window Refining\n for Small Objects'))
 

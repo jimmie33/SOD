@@ -15,7 +15,7 @@ This method aims at producing a highly compact set of detection windows for sali
 
 ## Quick Start
 1. Unzip the files to a local folder (denoted as **root_folder**).
-2. Enter the **root_folder** and modify the Matcaffe path in **root_folder/setup.m**.
+2. Enter the **root_folder** and modify the Matcaffe path in **setup.m**.
 3. In Matlab, run **setup.m** and it will automatically download the pre-trained GoogleNet model.
 4. Run **demo.m**.
  
