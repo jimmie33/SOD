@@ -11,7 +11,7 @@ This method aims at producing a highly compact set of detection windows for sali
 ## Prerequisites
 1. Linux
 2. Matlab 
-3. Caffe & Matcaffe (We use the official master branch downloaded on 4/1/2016. Previous versions may not be compatible.)
+3. Caffe & Matcaffe (**We use the official master branch downloaded on 4/1/2016. Previous versions may not be compatible.**)
 
 ## Quick Start
 1. Unzip the files to a local folder (denoted as **root_folder**).
